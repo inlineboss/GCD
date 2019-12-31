@@ -36,20 +36,25 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="7hA-B2-JEL">
             <objects>
-                <viewController id="zIt-oe-xCB" sceneMemberID="viewController">
+                <viewController id="zIt-oe-xCB" customClass="SecondViewController" customModule="GCD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xUr-BX-bQL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Pu-Zb-8YP">
                                 <rect key="frame" x="0.0" y="88" width="414" height="364"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="364" id="hCl-UH-kvm"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-wx-hmo">
+                                <rect key="frame" x="197" y="260" width="20" height="20"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -57,10 +62,16 @@
                             <constraint firstItem="0Pu-Zb-8YP" firstAttribute="centerX" secondItem="HWz-Ip-eWA" secondAttribute="centerX" id="LKW-xV-3Ey"/>
                             <constraint firstItem="0Pu-Zb-8YP" firstAttribute="top" secondItem="HWz-Ip-eWA" secondAttribute="top" id="Tg7-i9-qev"/>
                             <constraint firstItem="0Pu-Zb-8YP" firstAttribute="leading" secondItem="HWz-Ip-eWA" secondAttribute="leading" id="ihb-dv-hRc"/>
+                            <constraint firstItem="nVh-wx-hmo" firstAttribute="centerY" secondItem="0Pu-Zb-8YP" secondAttribute="centerY" id="m6M-Ch-Wtm"/>
+                            <constraint firstItem="nVh-wx-hmo" firstAttribute="centerX" secondItem="0Pu-Zb-8YP" secondAttribute="centerX" id="zLX-zP-3l0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HWz-Ip-eWA"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q1O-MJ-swH"/>
+                    <connections>
+                        <outlet property="imageView" destination="0Pu-Zb-8YP" id="dol-bI-s31"/>
+                        <outlet property="indicator" destination="nVh-wx-hmo" id="Eqq-1o-Ui8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLP-Vy-sID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +93,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAl-fv-a8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+            <point key="canvasLocation" x="239" y="113"/>
         </scene>
     </scenes>
 </document>
