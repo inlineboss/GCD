@@ -11,8 +11,7 @@ class AnimationIndicator {
     }
     
     func waiting (clouser : @escaping ()->()) {
-      
-
+    
         indicator.isHidden = false
         indicator.startAnimating()
         
